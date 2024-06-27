@@ -8,34 +8,11 @@ import model.Member;
 import service.ClubsService;
 
 public class ClubsServiceImpl implements ClubsService {
+
 	public static void main(String[] args) {
-
-		ClubsServiceImpl csi = new ClubsServiceImpl();
-
-//		Clubs c= new Clubs(null,"無敵艦隊",null,null,null,null,null,null);
-//		csi.addClubs(c);
-//		
-//		List<Clubs>l = csi.getAllClubs();
-//		for(Clubs x :l ) {
-//			System.out.println(x.getClubId() + "==" + x.getClubName());
-//			
-//		}
-//		System.out.println("===================================");
-//		Clubs cc = csi.getClubsById(2);
-//			System.out.println(cc.getClubId() + "==" + cc.getClubName());
-
-		Clubs c = csi.getClubsByName("天龍國");
-//		System.out.println(c);
-//		System.out.println(c.getClubId());
-
-//		Clubs c=new ClubsServiceImpl().getClubsByClubId("c00001");
-//		c.setClubUrl("www.facebook.com");
-//		c.setClubBillboard("天真活潑善良可愛又美麗");
-//		
-//		new ClubsServiceImpl().updateClubs(c);
-
+		
 	}
-
+	
 	private static ClubsDaoImpl cdi = new ClubsDaoImpl();
 
 	@Override
@@ -55,7 +32,6 @@ public class ClubsServiceImpl implements ClubsService {
 		List<Clubs> list = cdi.getClubsById(id);
 
 		if (list.size() != 0) {
-//			Member[] member = list.toArray(new Member[list.size()]);
 			Clubs[] club = list.toArray(new Clubs[list.size()]);
 			return club[0];
 		} else {
@@ -67,29 +43,17 @@ public class ClubsServiceImpl implements ClubsService {
 	public Clubs getClubsByName(String clubName) {
 		Clubs club = null;
 		List<Clubs> list = cdi.getAllClubs();
-		
-//		System.out.println("list.size()=" + list.size());
-//		System.out.println("list.isEmpty()=" + list.isEmpty());
-//		System.out.println("-----------------------------");
-		
-		if (!list.isEmpty()) {   //檢查列表是不是空
-			
-//			Clubs[] club2 = list.toArray(new Clubs[list.size()]);  
+
+		if (!list.isEmpty()) { // 檢查列表是不是空
 
 			for (Clubs x : list) {
-//				System.out.println("x.getClubName()=" + x.getClubName());
-//				System.out.println("clubName=" + clubName);
-//				System.out.println(x.getClubName().equals(clubName));
-//				System.out.println("-------------------");
 				if (x.getClubName().equals(clubName)) {
 
 					club = new ClubsServiceImpl().getClubsById(x.getId());
-//					System.out.println("@=>"+club);
 					return club;
 				}
 			}
 		}
-//		System.out.println("@@=>"+club);
 		return club;
 	}
 

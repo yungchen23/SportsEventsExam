@@ -16,18 +16,7 @@ public class EventClubDaoImpl implements EventClubDao{
 
 	public static void main(String[] args) {
 	
-		EventClubDaoImpl ecdi = new EventClubDaoImpl();
-		EventClub ec = new EventClub("e00001", "c00004", true, null, null);
-//		ecdi.joinEvents(ec);
-		
-//		List<EventClub>l = ecdi.getAllClubs();
-//		List<EventClub>l = ecdi.getClubsById(3);
-//		l.forEach((x)->System.out.println(x.getEventId()+"-"+x.getClubId()+"-"+x.getJoinDate()));
-		
-		List<EventClub>l = ecdi.getClubsById(3);
-		EventClub[] ee = l.toArray(new EventClub[1]);
-		ee[0].setJoinStatus(false);
-		ecdi.updateRegister(ee[0]);
+	
 	}
 
 	

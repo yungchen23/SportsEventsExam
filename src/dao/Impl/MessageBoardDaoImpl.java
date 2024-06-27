@@ -16,27 +16,7 @@ public class MessageBoardDaoImpl implements MessageBoardDao {
 
 	public static void main(String[] args) {
 
-		MessageBoardDaoImpl mbdi = new MessageBoardDaoImpl();
-
-//		MessageBoard msg = new MessageBoard(null, "m000003", "c00001", "111XXXXXX,XXXXXXXXaaaanxxxxx1123axxxaaqqqqqqq", null,null);
-//		new MessageBoardDaoImpl().addMsg(msg);
-//
-//		List<MessageBoard> m = mbdi.getMsgById(1);
-//		System.out.println(m);
-//		m.forEach((x) -> System.out.println(x.getId() + "-" + x.getMemberId() + "-" + x.getMessage()));
-//
-//		List<MessageBoard> m = mbdi.getMsgById(7);
-//		System.out.println(m.size());
-//		MessageBoard[] mb = m.toArray(new MessageBoard[m.size()]);
-//		System.out.println(mb.length);
-//		
-//		mb[0].setMessage("aaaaaaaaaaa-vvvvvvvvvvvvvv-bbbbbbbbbbbbbbb-nnnnnnnnnnnnnn");
-//		mbdi.updateMsg(mb[0]);
-		
-		mbdi.deletedMsg(7);
-		
-//		(String msgId, String memberId, String clubId, String message, String publishDate,
-//		String updateDate) {		
+	
 	}
 
 	@Override

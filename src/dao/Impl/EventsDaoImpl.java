@@ -16,19 +16,6 @@ public class EventsDaoImpl implements EventsDao {
 
 	public static void main(String[] args) {
 
-		EventsDaoImpl edi = new EventsDaoImpl();
-
-		Events evnet = new Events(null, "清涼一下滑水趣3", "夏日水上樂園全新推出活動.....!", "2024-07-01", "2024-08-31", null, null, null,null);
-//		edi.addEvents(evnet);
-//		List<Events> list = edi.getAllEvents();
-//		System.out.println(list.size());
-//		Events[] e = list.toArray(new Events[list.size()]);
-//		System.out.println(e.length);
-//		System.out.println(e[e.length - 1].getId());
-
-		List<Events> list =edi.getEventsById(3);
-		System.out.println(list.size());
-		
 	}
 
 	@Override
@@ -114,7 +101,7 @@ public class EventsDaoImpl implements EventsDao {
 				e.setEventIsPublish(rs.getBoolean("eventIsPublish"));
 				e.setUpdateDate(rs.getString("updateDate"));
 				e.setEventImg(rs.getString("eventImg"));
-				
+
 				list.add(e);
 			}
 
@@ -147,7 +134,7 @@ public class EventsDaoImpl implements EventsDao {
 				e.setEventIsPublish(rs.getBoolean("eventIsPublish"));
 				e.setUpdateDate(rs.getString("updateDate"));
 				e.setEventImg(rs.getString("eventImg"));
-				
+
 				list.add(e);
 			}
 
@@ -156,13 +143,6 @@ public class EventsDaoImpl implements EventsDao {
 		}
 		return list;
 	}
-	
-	
-	
-//	String eventId, String eventTitle, String eventDescription, String eventStartDate,
-//	String eventEndDate, Boolean eventIsPublish, String createDate, String updateDate	
-//	String sql = "insert into events(
-//	eventId,eventTitle,eventDescription,eventStartDate,eventEndDate,eventIsPublish,createDate) values(?,?,?,?,?,?,?)";
 
 	@Override
 	public void updateEvents(Events e) {
@@ -208,15 +188,15 @@ public class EventsDaoImpl implements EventsDao {
 	}
 
 	@Override
-	public void deletedEvent(int id) {   //刪除活動
+	public void deletedEvent(int id) { // 刪除活動
 		Connection conn = DbConnection.getDb();
-		String sql ="delete from events where id=?";
-		
+		String sql = "delete from events where id=?";
+
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setInt(1, id);	
-			ps.executeUpdate();	
-			
+			ps.setInt(1, id);
+			ps.executeUpdate();
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -238,7 +218,4 @@ public class EventsDaoImpl implements EventsDao {
 		}
 		return len;
 	}
-
-
-
 }

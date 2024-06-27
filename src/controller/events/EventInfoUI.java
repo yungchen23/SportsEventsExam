@@ -114,35 +114,6 @@ public class EventInfoUI extends JFrame {
 
 		CommonUI.SideMenuEvent(side_panel_1, this);
 
-//		JButton register_1_2_1_1_1 = new JButton("暫定");
-//		register_1_2_1_1_1.setForeground(new Color(0, 0, 0));
-//		register_1_2_1_1_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register_1_2_1_1_1.setBackground(new Color(255, 255, 255));
-//		register_1_2_1_1_1.setBounds(10, 173, 123, 30);
-//		panel_1.add(register_1_2_1_1_1);
-//		
-//		JButton register_1_2_1 = new JButton("已過期");
-//		register_1_2_1.setForeground(new Color(0, 0, 0));
-//		register_1_2_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register_1_2_1.setBackground(new Color(255, 255, 255));
-//		register_1_2_1.setBounds(10, 132, 123, 30);
-//		panel_1.add(register_1_2_1);
-//		
-//		JButton register_1_2_1_1 = new JButton("進行中");
-//		register_1_2_1_1.setForeground(new Color(0, 0, 0));
-//		register_1_2_1_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register_1_2_1_1.setBackground(new Color(255, 255, 255));
-//		register_1_2_1_1.setBounds(10, 91, 123, 30);
-//		panel_1.add(register_1_2_1_1);
-//		
-//		JButton register_1_2_1_1_1_1 = new JButton("暫定");
-//		register_1_2_1_1_1_1.setForeground(Color.BLACK);
-//		register_1_2_1_1_1_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register_1_2_1_1_1_1.setBackground(Color.WHITE);
-//		register_1_2_1_1_1_1.setBounds(10, 214, 123, 30);
-//		panel_1.add(register_1_2_1_1_1_1);
-//		
-
 		// --登出離開------------------------
 
 		CommonUI.exitMenu(side_panel_1, this);
@@ -307,7 +278,6 @@ public class EventInfoUI extends JFrame {
 
 		// ------畫面資訊----------------
 
-//		String bannerimg = "/controller/img/banner_003.png"; // 暫時代替
 		String bannerimg = event.getEventImg();
 
 		JLabel img = new JLabel("New label");

@@ -11,23 +11,7 @@ public class MessageBoardServiceImpl implements MessageBoardService {
 	public static void main(String[] args) {
 
 		MessageBoardServiceImpl mbsi = new MessageBoardServiceImpl();
-		
-//		MessageBoard msg = new MessageBoard(null, "m000005", "c00001", "無聊無聊無聊無聊無聊無聊無聊無聊無聊無聊無聊!!!!",null, null);
-//		mbsi.addMsg(msg);
 
-//		mbsi.deletedMsg(9);
-
-//		List<MessageBoard>l = mbsi.getAllMsg();
-//		List<MessageBoard> bb = mbsi.getMsgByClub("c00001");
-//		System.out.println(bb.getId()+"-"+bb.getMemberId()+"-"+bb.getMessage()+"-"+bb.getPublishDate());
-
-//		bb.forEach((x) -> System.out.println(x.getId() + "-" + x.getClubId() + "-" + x.getMemberId() + "-"
-//				+ x.getMessage() + "-" + x.getPublishDate()));
-		
-		MessageBoard msg= new MessageBoard();
-		msg.setMessage("無聊無聊無聊無聊無聊無聊無聊無聊無聊無聊無聊!!!!");
-		
-		mbsi.updateMsg(13, msg);
 		
 	}
 

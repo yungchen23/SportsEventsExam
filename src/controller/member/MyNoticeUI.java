@@ -18,15 +18,14 @@ import javax.swing.table.TableColumn;
 
 import controller.CommonUI;
 import controller.model.MyNoticeListTableModel;
-import model.views.myNoticelist;
 import model.Clubs;
 import model.Events;
 import model.Member;
 import model.MemberState;
+import model.views.myNoticelist;
 import service.Impl.ClubsServiceImpl;
 import service.Impl.MyNoticelistServiceImpl;
 import util.Common;
-import util.Temp;
 
 public class MyNoticeUI extends JFrame {
 
@@ -85,28 +84,11 @@ public class MyNoticeUI extends JFrame {
 		member = CommonUI.member;
 		club = CommonUI.club;
 
-//		Object obj2 = Temp.readFile(clubPath);
-//		club = (Clubs) obj2;
-//
-//		Object obj3 = Temp.readFile(filePathofMemberState);
-//		memberstate = (MemberState) obj3;
-//		
-//		Object obj4 = Temp.readFile(filePathofEvent);
-//		event = (Events) obj4;
-
-		
-//		member = CommonUI.member;
-//		memberstate = CommonUI.memberstate;
-//		club = CommonUI.club;
-
 		// ---------表格內數據----------------------
 
 		List<myNoticelist> list2 = null;
-//		System.out.println("memberstate.getClubId()-->"+memberstate);
 		
 		Clubs c = new ClubsServiceImpl().getClubsByClubId(memberstate.getClubId());
-//		System.out.println(c);
-//		System.out.println("c.getClubId()-->"+c.getClubId());
 		if (c != null) {
 			String author = c.getClubName();
 			list2 = new MyNoticelistServiceImpl().getNoticebyClubs(author);

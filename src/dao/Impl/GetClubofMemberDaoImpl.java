@@ -109,8 +109,4 @@ public class GetClubofMemberDaoImpl implements GetClubofMemberDao{
 		return mbc;
 	}
 
-	
-
-
-	
 }

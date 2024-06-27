@@ -13,7 +13,6 @@ public interface ClubsDao {
 	List<Clubs> getAllClubs();
 	List<Clubs> getClubsById(int id);
 	List<Clubs> getClubsByClubId(String ClubId);
-//	List<Clubs> getClubByName();
 	Integer getLatestId(); //返回已存在最後一筆id
 	
 	//U

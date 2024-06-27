@@ -10,19 +10,6 @@ public class EventClubServiceImpl implements EventClubService{
 
 	public static void main(String[] args) {
 		
-		EventClub ec = new EventClub("e00002", "c00002", true, null, null);
-		new EventClubServiceImpl().joinEvents(ec);
-//		
-//		List<EventClub> l = new EventClubServiceImpl().getAllClubs();
-//		l.forEach((x)->System.out.println(x.getId()+"-"+x.getEventId()+"-"+x.getClubId()+"-"+x.getJoinDate()));
-//		System.out.println("---------------------------------------");
-//		EventClub x =new EventClubServiceImpl().getClubsById(5);
-//		System.out.println(x.getId()+"-"+x.getEventId()+"-"+x.getClubId()+"-"+x.getJoinDate());
-		
-//		EventClub ec = new EventClub();
-//		ec.setJoinStatus(true);
-//		new EventClubServiceImpl().updateRegister(6, ec);
-		
 	}
 
 	private static EventClubDaoImpl ecdi = new EventClubDaoImpl();

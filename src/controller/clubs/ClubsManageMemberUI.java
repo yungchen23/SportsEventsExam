@@ -29,9 +29,9 @@ import model.Clubs;
 import model.Member;
 import model.MemberState;
 import model.views.getclubofmember;
+import service.Impl.GetclubofmemberServiceImpl;
 import service.Impl.MemberServiceImpl;
 import service.Impl.MemberStateServiceImpl;
-import service.Impl.GetclubofmemberServiceImpl;
 import util.Common;
 
 public class ClubsManageMemberUI extends JFrame {
@@ -91,7 +91,6 @@ public class ClubsManageMemberUI extends JFrame {
 
 		// ---------表格內數據----------------------
 
-//		List<getclubofmember> list=null;
 		list = new GetclubofmemberServiceImpl().getMemberbyClub(club.getClubId());
 		MyClubMemberListTableModel model = new MyClubMemberListTableModel(list);
 
@@ -144,23 +143,6 @@ public class ClubsManageMemberUI extends JFrame {
 		lblNewLabel_3.setFont(new Font("微軟正黑體", Font.BOLD, 20));
 		lblNewLabel_3.setBounds(10, 10, 132, 42);
 		panel_3_1.add(lblNewLabel_3);
-
-//		JButton printerBTN = new JButton("發布通知");
-//		printerBTN.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//				
-//				ClubsPostNoticeUI ui = new ClubsPostNoticeUI();
-//				ui.setVisible(true);
-//				dispose();
-//				
-//			}
-//		});
-//		printerBTN.setForeground(Color.WHITE);
-//		printerBTN.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		printerBTN.setBackground(new Color(64, 0, 64));
-//		printerBTN.setBounds(775, 25, 123, 32);
-//		panel_3_1.add(printerBTN);
 
 		JPanel panel_2_1_1 = new JPanel();
 		panel_2_1_1.setLayout(null);

@@ -26,18 +26,17 @@ import controller.events.EventExpiredListUI;
 import controller.events.EventListUI;
 import controller.events.EventUI;
 import controller.member.ChagerPasswordUI;
-import controller.member.PersonEditUI;
 import controller.member.MyNoticeUI;
+import controller.member.PersonEditUI;
 import model.Clubs;
 import model.EventClub;
 import model.Events;
 import model.Member;
 import model.MemberState;
 import service.Impl.ClubsServiceImpl;
-import service.Impl.MemberServiceImpl;
 import service.Impl.MemberStateServiceImpl;
-import util.Temp;
 import util.ExitApp;
+import util.Temp;
 
 public class CommonUI extends JFrame {
 
@@ -89,8 +88,6 @@ public class CommonUI extends JFrame {
 
 	public static void CookieData2() {
 
-		
-		
 		Object obj = Temp.readFile(filePath);
 		member = (Member) obj;
 		
@@ -153,11 +150,6 @@ public class CommonUI extends JFrame {
 
 	// -------Top選單----------------------------------------------------------------
 	public static void TopMenu(JPanel panel, Window window) {
-
-//		JPanel Top_panel = new JPanel();
-//		Top_panel.setLayout(null);
-//		Top_panel.setBounds(984, 10, 92, 48);
-//		panel.add(Top_panel);
 
 		JLabel lblNewLabel_4 = new JLabel("New label");
 		lblNewLabel_4.setIcon(new ImageIcon(ClubsList2UI.class.getResource("/controller/img/blueshoes-logo3 (1).png")));
@@ -488,10 +480,10 @@ public class CommonUI extends JFrame {
 				String msg2 = "登出帳號";
 
 				CommonUI.twoOption(msg1, msg2, () -> {
-//					member = null;
-//					club = null;
+					member = null;
+					club = null;
+
 					JOptionPane.showMessageDialog(null, "成功登出帳號。", msg2, JOptionPane.WARNING_MESSAGE);
-//					FiletReadandSave.saveFile(filePath, member);
 					LoginUI ui = new LoginUI();
 					ui.setVisible(true);
 					window.dispose();
@@ -511,10 +503,10 @@ public class CommonUI extends JFrame {
 
 				String msg1 = "你是否要離開這個程式?";
 				String msg2 = "離開程式";
-//				member = null;
-//				club = null;
+				member = null;
+				club = null;
 				CommonUI.twoOption(msg1, msg2, () -> window.dispose());
-//				FiletReadandSave.saveFile(filePath, member);
+				
 			}
 		});
 		register.setForeground(Color.WHITE);

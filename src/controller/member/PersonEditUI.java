@@ -39,7 +39,7 @@ import service.Impl.MemberStateServiceImpl;
 import util.Common;
 import util.Temp;
 
-public class PersonEditUI extends JFrame{
+public class PersonEditUI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -88,9 +88,6 @@ public class PersonEditUI extends JFrame{
 
 		CommonUI.CookieData2();
 		member = CommonUI.member;
-//		Object obj = Temp.readFile(filePath);
-//		member = (Member) obj;
-		System.out.println("1="+member.getMemberAge());
 
 		// -----上方選單----------------------------------------------------------
 
@@ -116,50 +113,14 @@ public class PersonEditUI extends JFrame{
 
 		CommonUI.SideMenuMember(side_panel_1, this);
 
-//
-//		JButton register_1_2_1_1_1 = new JButton("我的通知");
-//		register_1_2_1_1_1.setForeground(new Color(0, 0, 0));
-//		register_1_2_1_1_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register_1_2_1_1_1.setBackground(new Color(255, 255, 255));
-//		register_1_2_1_1_1.setBounds(10, 173, 123, 30);
-//		panel_1.add(register_1_2_1_1_1);
-//
-//		JButton register_1_2_1 = new JButton("修改密碼");
-//		register_1_2_1.setForeground(new Color(0, 0, 0));
-//		register_1_2_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register_1_2_1.setBackground(new Color(255, 255, 255));
-//		register_1_2_1.setBounds(10, 132, 123, 30);
-//		panel_1.add(register_1_2_1);
-//
-//		JButton register_1_2_1_1 = new JButton("個人資訊");
-//		register_1_2_1_1.setForeground(new Color(0, 0, 0));
-//		register_1_2_1_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register_1_2_1_1.setBackground(new Color(255, 255, 255));
-//		register_1_2_1_1.setBounds(10, 91, 123, 30);
-//		panel_1.add(register_1_2_1_1);
-//
-//		JButton register_1_2_1_1_1_1 = new JButton("暫定");
-//		register_1_2_1_1_1_1.setForeground(Color.BLACK);
-//		register_1_2_1_1_1_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register_1_2_1_1_1_1.setBackground(Color.WHITE);
-//		register_1_2_1_1_1_1.setBounds(10, 214, 123, 30);
-//		panel_1.add(register_1_2_1_1_1_1);
-//		
-//		JButton register_1_2_1_1_1_1_1 = new JButton("暫定");
-//		register_1_2_1_1_1_1_1.setForeground(Color.BLACK);
-//		register_1_2_1_1_1_1_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register_1_2_1_1_1_1_1.setBackground(Color.WHITE);
-//		register_1_2_1_1_1_1_1.setBounds(10, 254, 123, 30);
-//		panel_1.add(register_1_2_1_1_1_1_1);
-
 		// --登出離開------------------------
 
 		CommonUI.exitMenu(side_panel_1, this);
-		
-		//--登入資訊--------------
-		
-		CommonUI.userInfo(side_panel_1,member); 
-		
+
+		// --登入資訊--------------
+
+		CommonUI.userInfo(side_panel_1, member);
+
 		JPanel panel_1_1 = new JPanel();
 		panel_1_1.setLayout(null);
 		panel_1_1.setBounds(159, 69, 927, 554);
@@ -295,7 +256,7 @@ public class PersonEditUI extends JFrame{
 		memberID.setBounds(107, 51, 300, 40);
 		panel_2_1_1.add(memberID);
 
-		//日期選擇器
+		// 日期選擇器
 		JDateChooser dateChooser = new JDateChooser();
 		dateChooser.setDateFormatString("yyyy-MM-dd");
 		dateChooser.setPreferredSize(new Dimension(200, 30));
@@ -328,7 +289,7 @@ public class PersonEditUI extends JFrame{
 				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 				String sd = sdf.format(selectedDate);
 
-				//比較選擇器日期是否超過當前的日期
+				// 比較選擇器日期是否超過當前的日期
 				if (Common.dateComparison(sd)) {
 
 					try {
@@ -345,23 +306,17 @@ public class PersonEditUI extends JFrame{
 						if (member != null) {
 							JOptionPane.showMessageDialog(null, "儲存完成", "提示", JOptionPane.WARNING_MESSAGE);
 						}
-						
+
 						Temp.saveFile(filePath, member);
-						
-						
-						System.out.println("2="+member.getMemberAge());
-//						Object obj = Temp.readFile(filePath);
 						Member m3 = (Member) Temp.readFile(filePath);
-//						member = (Member) obj;
-						System.out.println("3="+m3.getMemberAge());
-						
+
 					} catch (Exception e2) {
 						e2.printStackTrace();
 						JOptionPane.showMessageDialog(null, "儲存失敗", "提示", JOptionPane.WARNING_MESSAGE);
 					}
-				}else {
-					
-					 JOptionPane.showMessageDialog(null, "日期不能超過今天!!", "提示", JOptionPane.WARNING_MESSAGE);
+				} else {
+
+					JOptionPane.showMessageDialog(null, "日期不能超過今天!!", "提示", JOptionPane.WARNING_MESSAGE);
 				}
 			}
 		});
@@ -377,32 +332,30 @@ public class PersonEditUI extends JFrame{
 		membername.setText(member.getMemberName());
 		memberemail.setText(member.getMemberEmail());
 		phone.setText(member.getMemberPhone());
-		
 
 		// 將日期格式進行轉換
-		if(member.getMemberBirthday()!=null) {		
+		if (member.getMemberBirthday() != null) {
 			DateTimeFormatter dateformat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 			LocalDate date = LocalDate.parse(member.getMemberBirthday(), dateformat);
 			Date date2 = Date.from(date.atStartOfDay(ZoneId.systemDefault()).toInstant()); // 網上找到將LocalDate轉換成Date的作法(待研究)
 			dateChooser.setDate(date2); // 日期選擇器，要給Date類型
 		}
 
-		//更新畫面顯示的年紀用
-		Member m =new MemberServiceImpl().getMemberByUser(member.getMemberAccount());
+		// 更新畫面顯示的年紀用
+		Member m = new MemberServiceImpl().getMemberByUser(member.getMemberAccount());
 		age.setText(m.getMemberAge());
-		
-		
+
 		sexOpt.setSelectedItem(member.getMemberGender());
 		location.setText(member.getMemberLocation());
 		textArea.setText(member.getMemberIntroduction());
 
-		//1.在MemberStateServiceImpl 獲得會員所屬的clubid
-		//2.在ClubServiceImpl以clubid獲得社團名稱
-		MemberState ms =  new MemberStateServiceImpl().getClubByMember(member.getMemberId());
+		// 1.在MemberStateServiceImpl 獲得會員所屬的clubid
+		// 2.在ClubServiceImpl以clubid獲得社團名稱
+		MemberState ms = new MemberStateServiceImpl().getClubByMember(member.getMemberId());
 		Clubs club = null;
-		
-		if(ms != null) {			
-			club= new ClubsServiceImpl().getClubsByClubId(ms.getClubId());
+
+		if (ms != null) {
+			club = new ClubsServiceImpl().getClubsByClubId(ms.getClubId());
 		}
 
 		// 查詢社團名稱

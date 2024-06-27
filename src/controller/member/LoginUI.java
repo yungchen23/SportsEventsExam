@@ -17,7 +17,6 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import controller.CommonUI;
-import controller.events.EventListUI;
 import controller.events.EventUI;
 import model.Member;
 import service.Impl.MemberServiceImpl;
@@ -30,7 +29,6 @@ public class LoginUI extends JFrame {
 	private JPanel contentPane;
 	private JTextField account;
 	private JPasswordField password;
-//	private String sqlPath = "dbInfo.txt";
 	private String filePath = "member.txt";
 
 	/**
@@ -185,23 +183,6 @@ public class LoginUI extends JFrame {
 			}
 		});
 		register.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-
-		// ===連線設定============================
-
-//		JLabel lblNewLabel_4 = new JLabel("New label");
-//		lblNewLabel_4.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//
-//				DbsettingUI ui = new DbsettingUI();
-//				ui.setVisible(true);
-//				dispose();
-//
-//			}
-//		});
-//		lblNewLabel_4.setIcon(new ImageIcon(LoginUI.class.getResource("/Controller/img/seeting.png")));
-//		lblNewLabel_4.setBounds(502, 10, 40, 42);
-//		panel_1.add(lblNewLabel_4);
 
 		// =========假第三方登入=================================================
 

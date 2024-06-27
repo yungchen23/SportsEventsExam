@@ -11,23 +11,20 @@ import dao.MyNoticelistDao;
 import model.views.myNoticelist;
 import util.DbConnection;
 
-public class MyNoticelistDaoImpl implements MyNoticelistDao{
+public class MyNoticelistDaoImpl implements MyNoticelistDao {
 
 	public static void main(String[] args) {
-		
-//		List<mynoticelist> l = new mynoticelistDaoImpl().getAllNotice();
-		 List<myNoticelist> l = new MyNoticelistDaoImpl().getNoticebyClubs("高雄天龍國");
-		 l.forEach((x)->System.out.println(x.getId()+"-"+x.getAuthor()+"-"+x.getTopic()+"-"+x.getMessage()));
+
 	}
 
 	@Override
 	public List<myNoticelist> getAllNotice() {
-		
+
 		List<myNoticelist> list = new ArrayList<>();
-		
+
 		Connection conn = DbConnection.getDb();
 		String sql = "SELECT * FROM mynoticelist";
-		
+
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
@@ -39,7 +36,7 @@ public class MyNoticelistDaoImpl implements MyNoticelistDao{
 				no.setTopic(rs.getString("topic"));
 				no.setMessage(rs.getString("message"));
 				no.setPublishDate(rs.getString("publishDate"));
-				
+
 				list.add(no);
 			}
 
@@ -51,11 +48,11 @@ public class MyNoticelistDaoImpl implements MyNoticelistDao{
 
 	@Override
 	public List<myNoticelist> getNoticebyClubs(String author) {
-List<myNoticelist> list = new ArrayList<>();
-		
+		List<myNoticelist> list = new ArrayList<>();
+
 		Connection conn = DbConnection.getDb();
 		String sql = "SELECT * FROM mynoticelist where author=?";
-		
+
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, author);
@@ -68,7 +65,7 @@ List<myNoticelist> list = new ArrayList<>();
 				no.setTopic(rs.getString("topic"));
 				no.setMessage(rs.getString("message"));
 				no.setPublishDate(rs.getString("publishDate"));
-				
+
 				list.add(no);
 			}
 

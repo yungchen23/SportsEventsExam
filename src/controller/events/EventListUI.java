@@ -74,40 +74,11 @@ public class EventListUI extends JFrame {
 		panel.setLayout(null);
 
 		// -----首次登入先捕捉下來的檔案----------------------------------------------------------
-		
-		
-		
+	
 		CommonUI.CookieData2();
 		memberstate = CommonUI.memberstate;
 		member = CommonUI.member;
 		club = CommonUI.club;
-		
-		
-//		Object obj = Temp.readFile(filePath);
-//		member = (Member) obj;	
-//
-//		// 1.先載入Clubs 和 MemberState 確認存在
-//		memberstate = new MemberStateServiceImpl().getClubByMember(member.getMemberId());
-//
-//		if (memberstate != null) {
-//			club = new ClubsServiceImpl().getClubsByClubId(memberstate.getClubId());
-//			Temp.saveFile(filePathofMemberState, memberstate);
-//			Temp.saveFile(clubPath, club);
-//
-//		} else {
-//			club = new Clubs();
-//			memberstate = new MemberState();
-//			Temp.saveFile(filePathofMemberState, memberstate);
-//			Temp.saveFile(clubPath, club);
-//			
-//		}
-		
-
-		
-//		Object obj2 = Temp.readFile(filePathofEvent);
-//		event = (Events) obj2;
-
-
 
 		// -----上方選單----------------------------------------------------------
 

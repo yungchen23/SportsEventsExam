@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -20,7 +19,6 @@ import model.EventClub;
 import model.Events;
 import model.Member;
 import model.MemberState;
-import service.Impl.EventClubServiceImpl;
 import service.Impl.EventsSerivceImpl;
 import util.Common;
 import util.Temp;
@@ -85,8 +83,6 @@ public class EventUI extends JFrame {
 		club = CommonUI.club;
 		event = CommonUI.event;
 		eventClub = CommonUI.eventClub;
-		
-		
 
 		// -----上方選單----------------------------------------------------------
 
@@ -119,12 +115,6 @@ public class EventUI extends JFrame {
 		// --登入資訊--------------
 
 		CommonUI.userInfo(side_panel_1, member);
-
-		// ---------表格內數據----------------------
-		
-//		//撈出所有活動數據，作為首頁banner用途		
-//		List<EventClub>list = new EventClubServiceImpl().getAllClubs();
-		
 
 
 		JPanel panel_1_1 = new JPanel();

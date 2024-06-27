@@ -8,9 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dao.MemberStateDao;
-import model.Member;
 import model.MemberState;
-import service.Impl.MemberStateServiceImpl;
 import util.Common;
 import util.DbConnection;
 
@@ -18,27 +16,6 @@ public class MemberStateDaoImpl implements MemberStateDao {
 
 	public static void main(String[] args) {
 
-		MemberStateDaoImpl msdi = new MemberStateDaoImpl();
-
-		MemberState ms = new MemberState("m00001", "c00001", true, false, "1", null,null);
-//		msdi.createClub(ms);
-//		msdi.joinClub(ms);
-//		List<MemberState> list =msdi.getAllMemberofClub();
-//		List<MemberState> list =msdi.getClubByLeader("m00002",true);
-	
-		
-//		msdi.getClubByMember(ms).forEach((x)->System.out.println(x.getId() + "-" + x.getMemberId() + "-" + x.getClubId()));
-//		msdi.getClubById("c00001").forEach((x)->System.out.println(x.getId() + "-" + x.getMemberId() + "-" + x.getClubId()));
-//		msdi.deletedClub("c00001");
-//		MemberState a = msdi.getClubByMember(ms);
-//		System.out.println(a.getIsGroupMember());
-		
-		
-		Member member = new Member("m00011", null, null, null, false, null);
-		MemberState ms1 = new MemberStateDaoImpl().getClubByMember(member.getMemberId());
-		System.out.println(ms1);
-		System.out.println(ms1.getMemberId());
-		
 		
 		
 	}
@@ -147,42 +124,10 @@ public class MemberStateDaoImpl implements MemberStateDao {
 		return list;
 	}
 
-//	@Override
-//	public List<MemberState> getClubByLeader(String memberId, boolean isLeader) {
-//		List<MemberState> list = new ArrayList<>();
-//
-//		Connection conn = DbConnection.getDb();
-//		String sql = "select * from MemberState where memberId=? and isLeader=?";
-//
-//		try {
-//			PreparedStatement ps = conn.prepareStatement(sql);
-//			ps.setString(1, memberId);
-//			ps.setBoolean(2, isLeader);
-//			ResultSet rs = ps.executeQuery();
-//
-//			if (rs.next()) {
-//				MemberState ms = new MemberState();
-//				ms.setId(rs.getInt("id"));
-//				ms.setMemberId(rs.getString("memberId"));
-//				ms.setClubId(rs.getString("clubId"));
-//				ms.setIsLeader(rs.getBoolean("isLeader"));
-//				ms.setIsGroupMember(rs.getBoolean("isGroupMember"));
-//				ms.setLevel(rs.getString("level"));
-//				ms.setJoinDate(rs.getString("joinDate"));
-//				ms.setUpdateDate(rs.getString("updateDate"));
-//
-//				list.add(ms);
-//			}
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		return list;
-//	}
 
 	@Override
 	public MemberState getClubByMember(String memberId) {  //可用memberId
-//		List<MemberState> list = new ArrayList<>();
-	
+
 		MemberState ms=null;
 		
 		Connection conn = DbConnection.getDb();

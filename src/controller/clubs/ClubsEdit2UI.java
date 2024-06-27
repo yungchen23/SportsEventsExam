@@ -237,18 +237,12 @@ public class ClubsEdit2UI extends JFrame {
 					club.setClubBillboard(clubBillboard.getText());
 					club.setClubUrl(url);
 					
-//					clubUrl.setText(club.getClubUrl());
-//					clubBillboard.setText(club.getClubBillboard());
-
 					new ClubsServiceImpl().updateClubs(club);
 					
 					if(club!=null) {
 						JOptionPane.showMessageDialog(null, "儲存完成", "提示", JOptionPane.WARNING_MESSAGE);
 					}
 					Temp.saveFile(clubPath, club);
-//					Object obj = Temp.readFile(clubPath);
-//					CommonUI.club = (Clubs) obj;
-//					club=CommonUI.club;
 
 				} catch (Exception e2) {
 					JOptionPane.showMessageDialog(null, "儲存失敗", "提示", JOptionPane.WARNING_MESSAGE);
@@ -265,7 +259,6 @@ public class ClubsEdit2UI extends JFrame {
 		Common.setWindows(this);
 
 		// =============畫面載入後預設顯示數據==================
-		
 		
 		getclubofmember gcf =new GetclubofmemberServiceImpl().getLeaderbyClub(club.getClubId());  //獲得團長名稱用
 		

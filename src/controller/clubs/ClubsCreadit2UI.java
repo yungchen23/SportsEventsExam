@@ -43,16 +43,7 @@ public class ClubsCreadit2UI extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					ClubsCreadit2UI frame = new ClubsCreadit2UI();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
+
 	}
 
 	/**
@@ -169,9 +160,6 @@ public class ClubsCreadit2UI extends JFrame {
 				MemberState nMemberstate = null; // 新建社團的狀態
 				nClub = new ClubsServiceImpl().getClubsByName(ClubName); // 檢查社團名稱重複
 
-//				System.out.println("在創建畫面===>c="+c.getClubId());
-//				System.out.println("在創建畫面===>空?="+ClubName.isEmpty());
-
 				if (ClubName.isEmpty()) {
 
 					JOptionPane.showMessageDialog(null, "社團名稱不能留空白", "提示", JOptionPane.WARNING_MESSAGE);
@@ -187,11 +175,8 @@ public class ClubsCreadit2UI extends JFrame {
 						nClub = new Clubs(null, ClubName, member.getMemberId(), ClubDescription, null, null, null, null);
 						new ClubsServiceImpl().addClubs(nClub); // 完成，有存在
 
-//						Clubs nClub2 = new ClubsServiceImpl().getClubsByClubId(nClub.getClubId());
-						Clubs nClub2 = new ClubsServiceImpl().getClubsByName(ClubName);
 
-//						System.out.println("1在創建畫面===>club=" + nClub2);
-//						System.out.println("2在創建畫面===>club="+nClub2.getClubId());
+						Clubs nClub2 = new ClubsServiceImpl().getClubsByName(ClubName);
 
 						memberstate = new MemberState(member.getMemberId(), null, null, null, null, null, null);
 						new MemberStateServiceImpl().createClub(memberstate, nClub2);

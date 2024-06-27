@@ -79,18 +79,7 @@ public class EventExpiredListUI extends JFrame {
 		memberstate = CommonUI.memberstate;
 		member = CommonUI.member;
 		club = CommonUI.club;
-		
-		
-//		Object obj = Temp.readFile(filePath);
-//		member = (Member) obj;
-//
-//		Object obj2 = Temp.readFile(filePathofEvent);
-//		event = (Events) obj2;
-//
-//		memberstate = CommonUI.memberstate;
-//		member = CommonUI.member;
-//		club = CommonUI.club;
-
+	
 		// -----上方選單----------------------------------------------------------
 
 		JPanel panel_3 = new JPanel();

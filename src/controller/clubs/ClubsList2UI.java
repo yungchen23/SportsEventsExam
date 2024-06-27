@@ -86,88 +86,15 @@ public class ClubsList2UI extends JFrame {
 		ClubsListTableModel model = new ClubsListTableModel(list2);
 
 		// -----加載temp資訊----------------------------------------------------------
-		
+
 		CommonUI.CookieData2();
 		memberstate = CommonUI.memberstate;
 		member = CommonUI.member;
 		club = CommonUI.club;
 
-		// ---------載入社團資訊-------------------------------------------------------
-
-		// 判斷社團是否存在
-//		MemberState ms = new MemberStateServiceImpl().getClubByMember(CommonUI.member.getMemberId());
-//
-//		// 社團資訊存在
-//		if (ms != null) {
-//			club = CommonUI.club;
-//			memberstate = CommonUI.memberstate;
-//		}
-//
-//		// 進行Clubs的空值檢查，並更新temp
-//		if (club != null) {
-//			System.out.println("\nClub ID: " + club.getClubId()); // 安全訪問getClubId
-//			Temp.saveFile(clubPath, club); // 繼續將數據寫入檔案
-//			Temp.saveFile(filePathofMemberState, memberstate);
-//		} else {
-//			System.out.println("獲取社團失敗，club為 null");
-//		}
-
 		// -----上方選單----------------------------------------------------------
 
 		CommonUI.TopMenu(panel_3, this);
-
-//		JPanel Top_panel = new JPanel();
-//		Top_panel.setLayout(null);
-//		Top_panel.setBounds(984, 10, 92, 48);
-//		panel_3.add(Top_panel);
-//
-//		JLabel lblNewLabel = new JLabel("活動");
-//		lblNewLabel.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//
-//				EventListUI ui = new EventListUI();
-//				ui.setVisible(true);
-//				dispose();
-//			}
-//		});
-//		lblNewLabel.setFont(new Font("微軟正黑體", Font.BOLD, 20));
-//		lblNewLabel.setBounds(699, 14, 72, 38);
-//		panel_3.add(lblNewLabel);
-//
-//		JLabel lblNewLabel_2 = new JLabel("社團");
-//		lblNewLabel_2.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//
-//				ClubsList2UI ui = new ClubsList2UI();
-//				ui.setVisible(true);
-//				dispose();
-//			}
-//		});
-//		lblNewLabel_2.setFont(new Font("微軟正黑體", Font.BOLD, 20));
-//		lblNewLabel_2.setBounds(795, 14, 72, 38);
-//		panel_3.add(lblNewLabel_2);
-//
-//		JLabel lblNewLabel_2_1 = new JLabel("我的");
-//		lblNewLabel_2_1.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//
-//				PersonEditUI ui = new PersonEditUI();
-//				ui.setVisible(true);
-//				dispose();
-//
-//			}
-//		});
-//		lblNewLabel_2_1.setFont(new Font("微軟正黑體", Font.BOLD, 20));
-//		lblNewLabel_2_1.setBounds(890, 14, 72, 38);
-//		panel_3.add(lblNewLabel_2_1);
-//		
-//		JLabel lblNewLabel_4 = new JLabel("New label");
-//		lblNewLabel_4.setIcon(new ImageIcon(ClubsList2UI.class.getResource("/controller/img/blueshoes-logo3 (1).png")));
-//		lblNewLabel_4.setBounds(21, 9, 264, 48);
-//		panel_3.add(lblNewLabel_4);
 
 		// -----側邊選單(Club)----------------------------------------------------
 
@@ -182,157 +109,16 @@ public class ClubsList2UI extends JFrame {
 		panel_1.add(side_panel_1);
 
 		CommonUI.SideMenu(side_panel_1, this);
-//		CommonUI.SideMenu2(side_panel_1, this);
-		
-
-//		JButton clubEdit = new JButton("社團編輯");
-//		clubEdit.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//				
-//				ClubsEdit2UI ui = new ClubsEdit2UI();
-//				ui.setVisible(true);
-//				dispose();
-//			}
-//		});
-//		clubEdit.setForeground(Color.BLACK);
-//		clubEdit.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		clubEdit.setBackground(Color.WHITE);
-//		clubEdit.setBounds(10, 173, 123, 30);
-//		side_panel_1.add(clubEdit);
-//		
-//		JButton msgBoard = new JButton("留言板");
-//		msgBoard.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//				
-//				ClubsMsgBoardUI ui = new ClubsMsgBoardUI();
-//				ui.setVisible(true);
-//				dispose();
-//			}
-//		});
-//		msgBoard.setForeground(Color.BLACK);
-//		msgBoard.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		msgBoard.setBackground(Color.WHITE);
-//		msgBoard.setBounds(10, 132, 123, 30);
-//		side_panel_1.add(msgBoard);
-//		
-//		JButton myClub = new JButton("我的社團");
-//		myClub.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//				
-//				MyClubsUI ui = new MyClubsUI();
-//				ui.setVisible(true);
-//				dispose();
-//			}
-//		});
-//		myClub.setForeground(Color.BLACK);
-//		myClub.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		myClub.setBackground(Color.WHITE);
-//		myClub.setBounds(10, 91, 123, 30);
-//		side_panel_1.add(myClub);
-//		
-//		JButton memberofClub = new JButton("團員管理");
-//		memberofClub.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//				
-//				ClubsManageMemberUI ui = new ClubsManageMemberUI();
-//				ui.setVisible(true);
-//				dispose();
-//				
-//			}
-//		});
-//		memberofClub.setForeground(Color.BLACK);
-//		memberofClub.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		memberofClub.setBackground(Color.WHITE);
-//		memberofClub.setBounds(10, 214, 123, 30);
-//		side_panel_1.add(memberofClub);
-//		
-//		JButton unknow = new JButton("暫定");
-//		unknow.setForeground(Color.BLACK);
-//		unknow.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		unknow.setBackground(Color.WHITE);
-//		unknow.setBounds(10, 253, 123, 30);
-//		side_panel_1.add(unknow);
 
 		// --登入資訊--------------
 
 		CommonUI.userInfo(side_panel_1, member);
 
-//		JLabel memberName_1 = new JLabel("張三豐");
-//		memberName_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		memberName_1.setBounds(10, 10, 121, 30);
-//		side_panel_1.add(memberName_1);
-//		memberName_1.setText(member.getMemberName());
-//		
-//		
-//		JLabel memberId_1 = new JLabel("ID: XXXXXXX");
-//		memberId_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		memberId_1.setBounds(10, 39, 121, 30);
-//		side_panel_1.add(memberId_1);
-//		memberId_1.setText("ID:"+member.getMemberId());
-
 		// --登出離開------------------------
 
 		CommonUI.exitMenu(side_panel_1, this);
 
-//		JButton register_1 = new JButton("登出");
-//		register_1.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//				String msg1 = "你是否要登出帳號?";
-//				String msg2 = "登出帳號";
-//
-//				CommonUI.twoOption(msg1, msg2, () -> {
-////					member = null;
-////					club = null;
-//					JOptionPane.showMessageDialog(null, "成功登出帳號。", msg2, JOptionPane.WARNING_MESSAGE);
-////					FiletReadandSave.saveFile(filePath, member);
-//					LoginUI ui = new LoginUI();
-//					ui.setVisible(true);
-//					dispose();
-//				});
-//				
-//			}
-//		});
-//		register_1.setForeground(Color.WHITE);
-//		register_1.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register_1.setBackground(Color.BLUE);
-//		register_1.setBounds(8, 451, 123, 30);
-//		side_panel_1.add(register_1);
-//		
-//		JButton register = new JButton("離開程式");
-//		register.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//
-//				String msg1 = "你是否要離開這個程式?";
-//				String msg2 = "離開程式";
-////				member = null;
-////				club = null;
-//				CommonUI.twoOption(msg1, msg2, () -> dispose());
-////				FiletReadandSave.saveFile(filePath, member);
-//			}
-//		});
-//		register.setForeground(Color.WHITE);
-//		register.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		register.setBackground(Color.BLUE);
-//		register.setBounds(8, 491, 123, 30);
-//		side_panel_1.add(register);
-
 		// -----登入資訊----------------------------------------------------
-
-//		JLabel memberName = new JLabel((String) null);
-//		memberName.setBounds(10, 10, 121, 30);
-//		side_panel_1.add(memberName);
-//		memberName.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//
-//		JLabel memberId = new JLabel((String) null);
-//		memberId.setFont(new Font("微軟正黑體", Font.PLAIN, 16));
-//		memberId.setBounds(10, 39, 121, 30);
-//		side_panel_1.add(memberId);
 
 		JPanel panel_1_1 = new JPanel();
 		panel_1_1.setLayout(null);
@@ -383,13 +169,10 @@ public class ClubsList2UI extends JFrame {
 					String clubId = table.getModel().getValueAt(row, 0).toString(); // 捕捉社團id是第一列時的數據
 
 					member = CommonUI.member; // 外面有放了 但沒抓到(待研究)
-//					System.out.println(member.getMemberId());
 
 					// 檢查是否已經是其他社團的成員或團長
 					boolean isClubLeader = new MemberStateServiceImpl().getUsetIsClubLeader(member);
 					boolean isClubMember = new MemberStateServiceImpl().getUsetIsClubmember(member);
-//					System.out.println("isClubLeader-"+isClubLeader);
-//					System.out.println("isClubMember-"+isClubMember);
 
 					if (isClubLeader) {
 						JOptionPane.showMessageDialog(null, "你已經是團長，無法加入其他社團。", "提示", JOptionPane.WARNING_MESSAGE);
@@ -406,8 +189,6 @@ public class ClubsList2UI extends JFrame {
 							memberstate.setMemberId(member.getMemberId());
 							new MemberStateServiceImpl().joinClub(memberstate, clubId);
 
-//							Temp.saveFile(filePath, member);
-//							Temp.saveFile(clubPath, club);
 							Temp.saveFile(filePathofMemberState, memberstate);
 
 							JOptionPane.showMessageDialog(null, "你已成功加入社團！", "成功", JOptionPane.INFORMATION_MESSAGE);
@@ -428,31 +209,9 @@ public class ClubsList2UI extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
-//				if (club != null) {
-//					System.out.println("裡面有東西!!!");
-//
-//				} else {
-//
-//					System.out.println("club是空的");
-//				}
-//
-//				if(ms!= null) {
-//					System.out.println("@--"+ms.getClubId());
-//					Clubs club1 = new ClubsServiceImpl().getClubsByClubId(ms.getClubId());
-//					String club2 = club1.getClubName();
-//				}
-//				System.out.println("-------------------\n" + ms);
-//				
-//				System.out.println(club);
-//
-//				String club = new ClubsDaoImpl().queryClubName(member.getClubID()); // 查詢社團名稱(秀出社團名稱用)
-
 				// 檢查是否已經是其他社團的成員或團長
 				boolean isClubMember = new MemberStateServiceImpl().getUsetIsClubmember(member);
 				boolean isClubLeader = new MemberStateServiceImpl().getUsetIsClubLeader(member);
-
-//				System.out.println("團長=>" + isClubLeader);
-//				System.out.println("團員=>" + isClubMember);
 
 				if (isClubLeader) {
 

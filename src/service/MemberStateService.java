@@ -17,10 +17,8 @@ public interface MemberStateService {
 	//R
 	List<MemberState> getAllMemberofClub();
 	List<MemberState> getClubById(String clubId);  //查詢指定社團
-	
-//	MemberState getClubByMember(MemberState ms);  //查詢單一團員
 	MemberState getClubByMember(String memberId);  //查詢單一團員
-//	MemberState getClubByLeader(String memberId,boolean isLeader);  //查詢團長	
+
 	
 	boolean getUsetIsClubmember(Member member);	//查詢是否為會員
 	boolean getUsetIsClubLeader(Member member);	//查詢是否為團長
@@ -28,7 +26,6 @@ public interface MemberStateService {
 	
 	
 	//U
-//	void updateLevel(String memberId,MemberState ms);  //修改社團成員權限	
 	void updateLevel(MemberState ms);  //修改社團成員權限
 	void updateClubByMember(String ClubId,MemberState ms);  //加入社團(成員貼上社團)
 		

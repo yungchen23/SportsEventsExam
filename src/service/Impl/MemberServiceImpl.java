@@ -10,39 +10,7 @@ public class MemberServiceImpl implements MemberService {
 
 	public static void main(String[] args) {
 
-		MemberServiceImpl msi =new MemberServiceImpl();
-		
-		Member m = new Member(null, "大A", "aaa", "111", "aa@abc.com", null, null, null, null, null, null, true, null,
-				null);
-//		new MemberServiceImpl().addMember(m);
-		System.out.println("1=====================");
-		List<Member> list = msi.getAllMember();
-		for(Member x : list) {
-			System.out.println(x.getMemberId()+"-"+x.getMemberName()+"-"+x.getMemberAccount());
-		}
-		System.out.println("2=====================");
-		
-		Member m1 =msi.getMemberByUser("大A");
-		System.out.println(m1);
-		
-//		Member m2 = msi.getMemberById(4);
-//		System.out.println(m2.getMemberId()+"-"+m2.getMemberName()+"-"+m2.getMemberAccount());
 
-//		Member m2= msi.getMemberById("ddd", "111");
-//		System.out.println(m2.getMemberId()+"-"+m2.getMemberName()+"-"+m2.getMemberAccount());
-		
-//		Member mm = new Member();
-//		mm.setMemberName("鋤大D");
-//		mm.setMemberEmail("999@cc.com");
-//		mm.setMemberBirthday("1999-4-5");
-//		mm.setMemberGender("女");
-//		mm.setMemberPhone("123-4567-8888");
-//		mm.setMemberLocation("枕頭山");
-//
-//		msi.updateMember(4, mm);
-		
-//		Member mm = new Member();
-//		msi.updateMember(1, "66666");
 		
 		
 	}

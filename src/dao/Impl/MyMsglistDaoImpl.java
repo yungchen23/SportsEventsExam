@@ -78,8 +78,5 @@ public class MyMsglistDaoImpl implements MyMsglistDao{
 		}
 		return list;
 	}
-
-	
-	
 	
 }

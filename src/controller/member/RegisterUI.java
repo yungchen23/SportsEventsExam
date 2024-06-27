@@ -30,8 +30,6 @@ public class RegisterUI extends JFrame {
 	private JPasswordField password;
 	private JPasswordField password2;
 	private JTextField name;
-//	private String sqlPath = "dbInfo.txt";
-//	private String filePath = "member.txt";
 
 	/**
 	 * Launch the application.
@@ -159,8 +157,6 @@ public class RegisterUI extends JFrame {
 							JOptionPane.showMessageDialog(null, "欄位不能留空白", "提示", JOptionPane.WARNING_MESSAGE);
 						} else {
 
-//	public Member(String memberId, String memberName, String memberAccount, String memberPassword, boolean status, String createDate) {
-
 							Member member2 = new Member(null, Name, Username, Password, true, null);
 							new MemberServiceImpl().addMember(member2);
 
@@ -206,7 +202,7 @@ public class RegisterUI extends JFrame {
 		lblNewLabel_3.setFont(new Font("微軟正黑體", Font.PLAIN, 18));
 		lblNewLabel_3.setBounds(142, 4, 110, 42);
 		panel_3.add(lblNewLabel_3);
-		
+
 		JLabel lblNewLabel_4_1 = new JLabel("New label");
 		lblNewLabel_4_1.setIcon(new ImageIcon(RegisterUI.class.getResource("/controller/img/cover001.jpg")));
 		lblNewLabel_4_1.setBounds(858, -11, 228, 644);

@@ -16,15 +16,7 @@ public class NoticeMemberDaoImpl implements NoticeMemberDao{
 
 	public static void main(String[] args) {
 		
-		NoticeMember nm = new NoticeMember(null, "m00012", "c00002","【學生運動參與情形調查】大專校院線上問卷填答系統維護公告", "配合 SurveyCake 系統進行系統維護與升級作業，以下期間將會無法填答問卷，敬請協助配合。!!", null);
-		new NoticeMemberDaoImpl().addMsg(nm);
-		
-//		List<NoticeMember> l = new NoticeMemberDaoImpl().getNoticeById(5);
-		List<NoticeMember> l = new NoticeMemberDaoImpl().getAllNotice();		
-//		List<NoticeMember> l = new NoticeMemberDaoImpl().getNoticeByClub("c00001");		
-//		l.forEach((x)->System.out.println(x.getId()+"-"+x.getMemberId()+"-"+x.getClubId()+"-"+x.getTopic()+"-"+x.getMessage()));
-//		new NoticeMemberDaoImpl().deletedNotice(3);
-		
+
 	}
 
 	@Override

@@ -10,23 +10,6 @@ import service.EventsSerivce;
 public class EventsSerivceImpl implements EventsSerivce {
 
 	public static void main(String[] args) {
-		EventsSerivceImpl esi = new EventsSerivceImpl();
-
-		Events evnet = new Events(null, "2024阿里山雲端馬拉松",
-				" 海拔2000公尺以上的高山，阿里山擁有豐富的自然與人文資源，日出、雲海、森林、鐵道以及原住民文化，阿里山更是空氣清淨品質區域，全台唯一阿里山高山路跑，邀請您一同體驗高山之美及做公益。",
-				"2024-08-01", "2024-08-31", null, null, null,null);
-//		esi.addEvents(evnet);
-
-//		List<Events> list = esi.getAllEvents();
-//		for(Events x : list) {
-//			System.out.println(x.getId()+"---"+x.getEventId()+"---"+x.getEventTitle()+"---"+x.getEventIsPublish());
-//		}
-
-		Events e2 = esi.getEventsById(4);
-		System.out.println(e2.getEventTitle());
-//		esi.updateEventPublish(4, true ,e2);
-
-//		esi.deletedEvents(5);
 
 	}
 

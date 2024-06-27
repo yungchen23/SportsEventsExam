@@ -14,76 +14,7 @@ import util.DbConnection;
 
 public class MemberDaoImpl implements MemberDao {
 	public static void main(String[] args) {
-		
-		MemberDaoImpl mdi = new MemberDaoImpl();
-		
 
-//		memberId,memberAccount,password,memberName,memberEmail,createDate
-//		Member m = new Member(null, "天龍人3", "ccc", "111", "bbb@abc.com", null, null, null, null, null, null, true, null,
-//				null);
-//		new MemberDaoImpl().addMember(m);
-
-//		List<Member> list = mdi.getAllMember();
-//		System.out.println(list.size());
-//		Member[] m = list.toArray(new Member[list.size()]);	
-//		System.out.println(m.length);
-		
-//		Integer i = new MemberDaoImpl().getLatestId();
-//		System.out.println("index=>"+i);
-		
-		
-//		List<Member> list = new MemberDaoImpl().getMemberById(1);
-		
-//		List<Member> list= mdi.getAllMember();
-//		
-//		for (Member x : list) {
-//			System.out.println(x.getMemberAccount() + "==" + x.getMemberName());
-//		}
-//		System.out.println("==========================================================");
-				
-		Member m2 = new MemberDaoImpl().getMemberById2("bbb", "111");
-		System.out.println(m2);
-		
-//		List<Member>list2 = mdi.getMemberById("aaa1", "111");
-//		for (Member x : list2) {
-//			System.out.println(x.getMemberAccount() + "==" + x.getMemberName());
-//		}
-		
-		
-//		String sql = "update member set " 
-//				+ "memberName=?, memberEmail=?, memberBirthday=?,"
-//				+ "memberGender=?, memberAge=?, memberPhone=?,"
-//				+ "memberLocation=?, memberIntroduction=?, updateDate=?"
-//				+ "where id=?";
-		
-//		public Member(String memberId, String memberName, String memberAccount, String memberPassword, String memberEmail,
-//				String memberBirthday, String memberGender, String memberAge, String memberPhone, String memberLocation,
-//				String memberIntroduction, String status, String createDate, String updateDate) {
-		
-		
-		
-//		Member mm = new MemberDaoImpl().getMemberById2("bbb", "111");
-//		
-//		mm.setMemberName("鋤大B");
-//		mm.setMemberEmail("123@cc.com");
-//		mm.setMemberBirthday("1988-10-10");
-//		mm.setMemberGender("男");
-//		mm.setMemberPhone("888-8888-8888");
-//		mm.setMemberLocation("樸克山");
-//		mdi.updateMember(mm);
-//
-//		
-//		System.out.println("==========================================================");
-//		Member mm = new MemberDaoImpl().getMemberById2("bbb", "111");
-//		mm.setMemberPassword("9999");
-//		mdi.updateMemberPassword(mm);
-//		
-//		
-//		List<Member> list3= mdi.getAllMember();
-//		
-//		for (Member x : list3) {
-//			System.out.println(x.getMemberAccount() + "==" + x.getMemberName());
-//		}
 	}
 
 	@Override
@@ -415,14 +346,7 @@ public class MemberDaoImpl implements MemberDao {
 		}else {
 			len = 0;
 		}
-//		System.out.println(len);
 		return len;
-	}
-
-	@Override
-	public void updateMemberStatus(Member m) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
