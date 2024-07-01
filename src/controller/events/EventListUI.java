@@ -35,7 +35,6 @@ public class EventListUI extends JFrame {
 	private Clubs club;
 	private MemberState memberstate;
 	private Events event;
-	private String sqlPath = "dbInfo.txt";
 	private String filePath = "member.txt";
 	private String clubPath = "club.txt";
 	private String filePathofMemberState = "memberState.txt";

@@ -52,7 +52,6 @@ public class CommonUI extends JFrame {
 	// 文件路徑
 	private static String clubPath = "club.txt";
 	private static String filePathofMemberState = "memberState.txt";
-	private static String sqlPath = "dbInfo.txt";
 	private static String filePath = "member.txt";
 	private static String filePathofEvent = "events.txt";
 	private static String filePathofEventClub = "eventclub.txt";
@@ -152,7 +151,7 @@ public class CommonUI extends JFrame {
 	public static void TopMenu(JPanel panel, Window window) {
 
 		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setIcon(new ImageIcon(ClubsList2UI.class.getResource("/controller/img/blueshoes-logo3 (1).png")));
+		lblNewLabel_4.setIcon(new ImageIcon(ClubsList2UI.class.getResource("/img/blueshoes-logo3 (1).png")));
 		lblNewLabel_4.setBounds(21, 9, 264, 48);
 		panel.add(lblNewLabel_4);
 

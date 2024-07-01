@@ -36,7 +36,6 @@ public class ClubsPostNoticeUI extends JFrame {
 	private Member member; // 儲存個人狀態用
 	private Clubs club;
 	private MemberState memberstate;
-	private String sqlPath = "dbInfo.txt";
 	private String filePath = "member.txt";
 	private String clubPath = "club.txt";
 	private String filePathofMemberState = "memberState.txt";

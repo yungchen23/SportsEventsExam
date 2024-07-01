@@ -37,7 +37,6 @@ public class EventUI extends JFrame {
 	private EventClub eventClub;
 	
 	//儲存路徑
-	private String sqlPath = "dbInfo.txt";
 	private String filePath = "member.txt";
 	private String clubPath = "club.txt";
 	private String filePathofMemberState = "memberState.txt";
@@ -176,7 +175,7 @@ public class EventUI extends JFrame {
 
 			}
 		});		
-		banner1.setIcon(new ImageIcon(EventUI.class.getResource("/controller/img/banner_003.png")));
+		banner1.setIcon(new ImageIcon(EventUI.class.getResource("/img/banner_003.png")));
 		banner1.setBounds(10, 10, 868, 106);
 		panel_2.add(banner1);
 		
@@ -194,7 +193,7 @@ public class EventUI extends JFrame {
 
 			}
 		});
-		banner2.setIcon(new ImageIcon(EventUI.class.getResource("/controller/img/banner_002.png")));
+		banner2.setIcon(new ImageIcon(EventUI.class.getResource("/img/banner_002.png")));
 		banner2.setBounds(10, 140, 868, 106);
 		panel_2.add(banner2);
 		
@@ -212,7 +211,7 @@ public class EventUI extends JFrame {
 				
 			}
 		});
-		banner3.setIcon(new ImageIcon(EventUI.class.getResource("/controller/img/banner_001.png")));
+		banner3.setIcon(new ImageIcon(EventUI.class.getResource("/img/banner_001.png")));
 		banner3.setBounds(10, 273, 868, 106);
 		panel_2.add(banner3);
 

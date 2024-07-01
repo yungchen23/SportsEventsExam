@@ -70,7 +70,7 @@ public class RegisterUI extends JFrame {
 		panel.setLayout(null);
 
 		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setIcon(new ImageIcon(RegisterUI.class.getResource("/controller/img/cover001.jpg")));
+		lblNewLabel_4.setIcon(new ImageIcon(RegisterUI.class.getResource("/img/cover001.jpg")));
 		lblNewLabel_4.setBounds(0, -16, 228, 644);
 		panel.add(lblNewLabel_4);
 
@@ -204,7 +204,7 @@ public class RegisterUI extends JFrame {
 		panel_3.add(lblNewLabel_3);
 
 		JLabel lblNewLabel_4_1 = new JLabel("New label");
-		lblNewLabel_4_1.setIcon(new ImageIcon(RegisterUI.class.getResource("/controller/img/cover001.jpg")));
+		lblNewLabel_4_1.setIcon(new ImageIcon(RegisterUI.class.getResource("/img/cover001.jpg")));
 		lblNewLabel_4_1.setBounds(858, -11, 228, 644);
 		contentPane.add(lblNewLabel_4_1);
 

@@ -49,7 +49,6 @@ public class PersonEditUI extends JFrame {
 	private JTextField memberemail;
 	private String SexOpt; // 性別combobox用
 	private Member member; // 儲存個人狀態用
-	private String sqlPath = "dbInfo.txt";
 	private String filePath = "member.txt";
 	private JTextField location;
 

@@ -29,7 +29,6 @@ public class ChagerPasswordUI extends JFrame {
 	private JPasswordField newPassword;
 	private JPasswordField rePassword;
 	private Member member; // 儲存個人狀態用
-	private String sqlPath = "dbInfo.txt";
 	private String filePath = "member.txt";
 	/**
 	 * Launch the application.

@@ -164,12 +164,12 @@ public class ForgotUI extends JFrame {
 		panel_3.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon(ForgotUI.class.getResource("/controller/img/2023-03-27-1.jpg")));
+		lblNewLabel_1.setIcon(new ImageIcon(ForgotUI.class.getResource("/img/2023-03-27-1.jpg")));
 		lblNewLabel_1.setBounds(0, 0, 248, 633);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("New label");
-		lblNewLabel_1_1.setIcon(new ImageIcon(ForgotUI.class.getResource("/controller/img/2023-03-27-1.jpg")));
+		lblNewLabel_1_1.setIcon(new ImageIcon(ForgotUI.class.getResource("/img/2023-03-27-1.jpg")));
 		lblNewLabel_1_1.setBounds(838, 0, 248, 633);
 		contentPane.add(lblNewLabel_1_1);
 

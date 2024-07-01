@@ -40,7 +40,6 @@ public class ClubsMsgBoardUI extends JFrame {
 	private MemberState memberstate;
 	private Member member; // 儲存個人狀態用
 	private Clubs club;
-	private String sqlPath = "dbInfo.txt";
 	private String filePath = "member.txt";
 	private String clubPath = "club.txt";
 	private String filePathofMemberState = "memberState.txt";

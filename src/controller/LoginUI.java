@@ -62,7 +62,7 @@ public class LoginUI extends JFrame {
 		contentPane.setLayout(null);
 
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 474, 509);
+		panel.setBounds(0, 0, 534, 633);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
@@ -201,15 +201,15 @@ public class LoginUI extends JFrame {
 
 			}
 		});
-		lblNewLabel_4_1.setIcon(new ImageIcon(LoginUI.class.getResource("/Controller/img/login2.png")));
+		lblNewLabel_4_1.setIcon(new ImageIcon(LoginUI.class.getResource("/img/login2.png")));
 
 		JLabel lblNewLabel_3 = new JLabel("New label");
-		lblNewLabel_3.setIcon(new ImageIcon(LoginUI.class.getResource("/controller/img/blueshoes-logo3.png")));
+		lblNewLabel_3.setIcon(new ImageIcon(LoginUI.class.getResource("/img/blueshoes-logo3.png")));
 		lblNewLabel_3.setBounds(10, 113, 520, 79);
 		panel_1.add(lblNewLabel_3);
 
 		JLabel lblNewLabel_2 = new JLabel("background");
-		lblNewLabel_2.setIcon(new ImageIcon(LoginUI.class.getResource("/controller/img/cover4.jpg")));
+		lblNewLabel_2.setIcon(new ImageIcon(LoginUI.class.getResource("/img/cover003.png")));
 		lblNewLabel_2.setBounds(0, 0, 535, 637);
 		panel.add(lblNewLabel_2);
 

@@ -65,7 +65,7 @@ public class ClubsRoleUI extends JFrame {
 		panel.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(ClubsRoleUI.class.getResource("/controller/img/role.png")));
+		lblNewLabel.setIcon(new ImageIcon(ClubsRoleUI.class.getResource("/img/role.png")));
 		lblNewLabel.setBounds(20, 10, 766, 293);
 		panel.add(lblNewLabel);
 		
